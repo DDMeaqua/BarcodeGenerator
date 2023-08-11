@@ -36,14 +36,18 @@ export default async function main(ui: any, t = (s: string) => s) {
           filterByTypes: [FieldType.Attachment],
         }),
         form.inputNumber("width", {
-          label: t("select.qrcode.size"),
+          label: t("select.qrcode.x"),
+          defaultValue: "300",
+        }),
+        form.inputNumber("height", {
+          label: t("select.qrcode.y"),
           defaultValue: "300",
         }),
       ],
       buttons: [t("ok")],
     }),
     async ({ values }: any) => {
-      const { tableId, urlFieldId, attachmentFieldId, width } = values;
+      const { tableId, urlFieldId, attachmentFieldId, width, height } = values;
 
       if (!tableId || !urlFieldId || !attachmentFieldId) {
         ui.message.error(t("error.empty"));
@@ -75,6 +79,8 @@ export default async function main(ui: any, t = (s: string) => s) {
           JsBarcode(canvas, text, {
             format: "CODE128",
             displayValue: false,
+            width: width,
+            height: height,
           });
           return canvas.toDataURL();
         };

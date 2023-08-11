@@ -10,7 +10,8 @@
   "select.att": "Attachment field",
   "select.att.placeholder": "Please select the attachment field where you want to save the Barcode",
   "select.qrcode.type": "Barcode format",
-  "select.qrcode.size": "Barcode size（pixels）",
+  "select.qrcode.x": "Barcode Length (Default: 2)",
+  "select.qrcode.y": "Barcode Width (Default: 100)",
   "ok": "OK",
   "error.empty": "Please select complete information"
 }

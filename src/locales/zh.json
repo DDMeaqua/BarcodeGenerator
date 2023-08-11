@@ -9,7 +9,8 @@
   "select.url.placeholder": "请选择您想要生成条形码的URL的字段",
   "select.att": "附件字段",
   "select.att.placeholder": "请选择您想要保存条形码的附件字段",
-  "select.qrcode.size": "条形码大小（像素）",
+  "select.qrcode.x": "条形码长度（默认为2）",
+  "select.qrcode.y": "条形码宽度（默认为100）",
   "ok": "确定",
   "error.empty": "请选择完整信息"
 }
