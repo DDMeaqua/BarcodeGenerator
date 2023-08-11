@@ -37,11 +37,11 @@ export default async function main(ui: any, t = (s: string) => s) {
         }),
         form.inputNumber("width", {
           label: t("select.qrcode.x"),
-          defaultValue: "300",
+          defaultValue: "2",
         }),
         form.inputNumber("height", {
           label: t("select.qrcode.y"),
-          defaultValue: "300",
+          defaultValue: "100",
         }),
       ],
       buttons: [t("ok")],
